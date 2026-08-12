@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Centro de Formación Acreditado · Pico Mulhacén 12, Arganda del Rey · REMAX Horizon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #f7f5ee;
+  font-family: 'Montserrat', sans-serif;
+  color: #111111;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: #111111;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #ff1200;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.topbar-logo { display: flex; align-items: center; gap: 10px; }
+.topbar-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.topbar-badge {
+  background: #ff1200;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #111111 0%, #1a1a2e 100%);
+  padding: 64px 24px 56px;
+  text-align: center;
+  border-bottom: 4px solid #ff1200;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(255,18,0,0.07) 0%, transparent 70%);
+}
+.hero-tipo {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff1200;
+  border: 1px solid #ff1200;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #f7f5ee;
+  font-size: clamp(28px, 5vw, 52px);
+  line-height: 1.15;
+  margin-bottom: 14px;
+  position: relative;
+}
+.hero-sub {
+  color: #aaaaaa;
+  font-size: 15px;
+  font-weight: 500;
+  max-width: 540px;
+  margin: 0 auto 10px;
+  position: relative;
+}
+.hero-dir {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.hero-dir span {
+  color: #f7f5ee;
+  font-weight: 700;
+}
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.btn-hero-primary {
+  background: #ff1200;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 15px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.3px;
+}
+.btn-hero-primary:hover { background: #cc0e00; transform: translateY(-2px); }
+.btn-hero-outline {
+  background: transparent;
+  color: #f7f5ee;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-hero-outline:hover { border-color: #f7f5ee; background: rgba(255,255,255,0.06); }
+
+/* ── KPI BAR ── */
+.kpi-bar {
+  background: #111111;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid #222;
+}
+.kpi {
+  text-align: center;
+  padding: 24px 28px;
+  border-right: 1px solid #222;
+  flex: 1;
+  min-width: 120px;
+}
+.kpi:last-child { border-right: none; }
+.kpi-num {
+  font-weight: 900;
+  font-size: 28px;
+  color: #ff1200;
+  line-height: 1;
+}
+.kpi-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 5px;
+}
+
+/* ── SECCIONES ── */
+.section { padding: 48px 20px; max-width: 700px; margin: 0 auto; }
+.section-wide { padding: 48px 20px; max-width: 900px; margin: 0 auto; }
+.sec-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #ff1200;
+  border-left: 4px solid #ff1200;
+  padding-left: 12px;
+  margin-bottom: 8px;
+}
+.sec-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 3.5vw, 28px);
+  color: #111111;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.sec-title em {
+  font-style: normal;
+  color: #0043ff;
+}
+
+/* ── GALLERY PLACEHOLDER ── */
+.gallery-section {
+  background: #111111;
+  padding: 0;
+}
+.gallery-main {
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-bottom: 2px solid #222;
+}
+.gallery-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255,18,0,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.gallery-main-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f7f5ee;
+  opacity: 0.8;
+}
+.gallery-main-sub {
+  font-size: 11px;
+  color: #666;
+}
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  padding: 3px;
+}
+.gallery-thumb {
+  height: 80px;
+  background: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #333;
+  border-radius: 4px;
+}
+
+/* ── VIDEO PLACEHOLDER ── */
+.video-placeholder {
+  background: linear-gradient(135deg, #0a0a14 0%, #111 100%);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-top: 2px solid #222;
+  border-bottom: 3px solid #ff1200;
+}
+.video-btn {
+  width: 56px; height: 56px;
+  background: rgba(255,18,0,0.2);
+  border: 2px solid #ff1200;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.video-label { color: #888; font-size: 12px; font-weight: 600; }
+
+/* ── DESCRIPCION ── */
+.desc-text {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0043ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 4px 4px 4px 0;
+}
+.pills-row { margin-top: 16px; }
+
+/* ── ESPACIOS GRID ── */
+.spaces-bg {
+  background: white;
+  padding: 48px 20px;
+  border-top: 1px solid #e8e4db;
+  border-bottom: 1px solid #e8e4db;
+}
+.spaces-container { max-width: 700px; margin: 0 auto; }
+.planta-label {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #999;
+  margin: 24px 0 12px;
+}
+.planta-label:first-of-type { margin-top: 0; }
+.spaces-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.space-card {
+  background: #f7f5ee;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 3px solid #e8e4db;
+}
+.space-card.featured { border-left-color: #ff1200; }
+.space-card.formation { border-left-color: #0043ff; }
+.space-name { font-size: 13px; font-weight: 700; color: #111; }
+.space-m2 { font-size: 14px; font-weight: 900; color: #0043ff; }
+.space-tipo { font-size: 9px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.totals-bar {
+  background: #111111;
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+.total-item { text-align: center; }
+.total-num {
+  font-weight: 900;
+  font-size: 22px;
+  color: #ff1200;
+}
+.total-label {
+  font-size: 9px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 3px;
+}
+
+/* ── INSTALACIONES ── */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+.feature-item {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border-top: 2px solid #f0ece3;
+}
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  background: #f7f5ee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.feature-name { font-size: 13px; font-weight: 700; color: #111; }
+.feature-desc { font-size: 11px; color: #888; margin-top: 2px; }
+
+/* ── CURSOS ACORDEON ── */
+.cursos-section {
+  background: #111111;
+  padding: 48px 20px;
+  border-top: 3px solid #ff1200;
+}
+.cursos-container { max-width: 700px; margin: 0 auto; }
+.cursos-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.cursos-header .sec-label-light {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ff1200;
+  display: block;
+  margin-bottom: 10px;
+}
+.cursos-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #f7f5ee;
+  font-size: clamp(22px, 4vw, 34px);
+  line-height: 1.2;
+}
+.cursos-header p {
+  color: #888;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.accordion { display: flex; flex-direction: column; gap: 6px; }
+.acc-item {
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  overflow: hidden;
+}
+.acc-header {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  color: #f7f5ee;
+}
+.acc-header:hover { background: rgba(255,18,0,0.05); }
+.acc-title-wrap { display: flex; align-items: center; gap: 12px; }
+.acc-emoji { font-size: 20px; width: 32px; text-align: center; }
+.acc-title { font-size: 14px; font-weight: 700; }
+.acc-count {
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(255,18,0,0.2);
+  color: #ff1200;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.acc-arrow {
+  color: #555;
+  font-size: 12px;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+.acc-item.open .acc-arrow { transform: rotate(90deg); }
+.acc-body {
+  display: none;
+  padding: 0 18px 16px;
+}
+.acc-item.open .acc-body { display: block; }
+.acc-list {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+.acc-list li {
+  font-size: 13px;
+  color: #bbb;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+  border-left: 2px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.acc-list li::before { content: '›'; color: #ff1200; font-weight: 900; }
+
+.cursos-cta {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.btn-download {
+  background: #0043ff;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 13px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+.btn-download:hover { background: #0030bb; }
+.btn-contact-cursos {
+  background: transparent;
+  color: #f7f5ee;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid #333;
+  transition: border-color 0.2s;
+}
+.btn-contact-cursos:hover { border-color: #666; }
+
+/* ── FICHA REGISTRAL ── */
+.registral-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+  border-top: 3px solid #0043ff;
+  margin-top: 20px;
+}
+.reg-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0ece3;
+  gap: 12px;
+}
+.reg-row:last-child { border-bottom: none; }
+.reg-key { font-size: 12px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0; }
+.reg-val { font-size: 13px; font-weight: 600; color: #111; text-align: right; }
+.reg-badge {
+  background: #f0fdf4;
+  color: #16a34a;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid #bbf7d0;
+}
+
+/* ── PLANOS ── */
+.planos-section { padding: 48px 20px; background: #f7f5ee; }
+.planos-container { max-width: 700px; margin: 0 auto; }
+.planos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+.plano-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.plano-thumb {
+  height: 160px;
+  background: linear-gradient(135deg, #e8e4db 0%, #ddd8ce 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #bbb;
+}
+.plano-name {
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+  border-top: 2px solid #ff1200;
+}
+.plano-sup { font-size: 11px; color: #888; font-weight: 500; }
+
+/* ── AGENTE ── */
+.agent-section {
+  background: #111111;
+  padding: 48px 20px;
+  border-top: 3px solid #ff1200;
+}
+.agent-container { max-width: 700px; margin: 0 auto; }
+.agent-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #2a2a2a;
+}
+.agent-photo-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #222;
+  border: 3px solid #ff1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+.agent-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #f7f5ee;
+  margin-bottom: 3px;
+}
+.agent-role {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 16px;
+}
+.agent-btns { display: flex; flex-direction: column; gap: 8px; }
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-wa:hover { background: #1da955; }
+.btn-mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0043ff;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-mail:hover { background: #0030bb; }
+
+.agent-divider {
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+/* ── PRECIO CTA ── */
+.precio-banner {
+  background: #ff1200;
+  padding: 28px 20px;
+  text-align: center;
+}
+.precio-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 6px;
+}
+.precio-val {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  color: white;
+  letter-spacing: -0.5px;
+}
+.precio-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+.btn-precio {
+  display: inline-block;
+  background: white;
+  color: #ff1200;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 14px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.btn-precio:hover { transform: translateY(-2px); }
+
+/* ── FOOTER ── */
+footer {
+  background: #111111;
+  text-align: center;
+  padding: 36px 20px 24px;
+  border-top: 1px solid #1e1e1e;
+}
+footer p { color: #666; font-size: 12px; margin: 5px 0; }
+footer .footer-brand { color: #aaa; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+footer .footer-legal { font-size: 10px; color: #444; margin-top: 14px; }
+
+/* ── DIVIDERS ── */
+.divider-red {
+  height: 3px;
+  background: linear-gradient(90deg, #ff1200 0%, #cc0e00 100%);
+}
+
+@media (max-width: 480px) {
+  .spaces-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .planos-grid { grid-template-columns: 1fr; }
+  .gallery-thumbs { grid-template-columns: repeat(2,1fr); }
+  .totals-bar { grid-template-columns: 1fr 1fr; }
+  .agent-card { flex-direction: column; text-align: center; }
+  .kpi { padding: 18px 12px; }
+  .kpi-num { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-logo">
+    <svg width="110" height="30" viewBox="0 0 120 34" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="13" cy="13" r="10" fill="#ff1200"/>
+      <circle cx="13" cy="13" r="5.5" fill="white"/>
+      <circle cx="13" cy="13" r="2.4" fill="#ff1200"/>
+      <line x1="13" y1="23" x2="13" y2="30" stroke="#ff1200" stroke-width="2.2"/>
+      <text x="29" y="15" font-family="-apple-system,Arial,sans-serif" font-size="14" font-weight="900" fill="white">REMAX</text>
+      <text x="29" y="27" font-family="-apple-system,Arial,sans-serif" font-size="8.5" font-weight="700" fill="#f7f5ee" letter-spacing="1.6">HORIZON</text>
+    </svg>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span class="topbar-label">Industrial · Arganda del Rey</span>
+    <span class="topbar-badge">Exclusiva</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tipo">🏛️ Registrado Comunidad de Madrid · Formación Profesional para el Empleo</div>
+  <h1>Nave equipada para<br>impartir cursos acreditados</h1>
+  <p class="hero-sub">491 m² útiles · 3 salas de formación · Taller industrial · Totalmente equipada y lista para operar</p>
+  <p class="hero-dir">📍 <span>C/ Pico Mulhacén, 12</span> · Arganda del Rey (Madrid)</p>
+  <div class="hero-ctas">
+    <a href="#contacto" class="btn-hero-primary">Solicitar información →</a>
+    <a href="#cursos" class="btn-hero-outline">Ver catálogo de cursos</a>
+  </div>
+</section>
+
+<!-- KPI BAR -->
+<div class="kpi-bar">
+  <div class="kpi">
+    <div class="kpi-num">490</div>
+    <div class="kpi-label">m² útiles</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-num">3</div>
+    <div class="kpi-label">Salas formación</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-num">173</div>
+    <div class="kpi-label">m² de taller</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-num">502</div>
+    <div class="kpi-label">m² de parcela</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-num">2</div>
+    <div class="kpi-label">Plantas + patios</div>
+  </div>
+</div>
+
+<!-- GALERÍA FOTOS -->
+<style>
+.gallery-section { background:#111; }
+.gallery-main-img {
+  width:100%; height:500px;
+  object-fit:cover; display:block;
+  cursor:pointer;
+  transition: opacity 0.3s;
+}
+.gallery-thumbs-real {
+  display:grid; grid-template-columns:repeat(6,1fr); gap:3px; padding:3px;
+  background:#111;
+}
+.gallery-thumbs-real img {
+  width:100%; height:80px; object-fit:cover; cursor:pointer;
+  opacity:0.65; transition:opacity 0.2s;
+  border-bottom:2px solid transparent;
+}
+.gallery-thumbs-real img:hover,
+.gallery-thumbs-real img.active { opacity:1; border-bottom-color:#ff1200; }
+.gallery-counter {
+  background:#111; color:#666; font-size:11px;
+  text-align:right; padding:6px 12px;
+  font-weight:600;
+}
+@media(max-width:480px){
+  .gallery-main-img { height:280px; }
+  .gallery-thumbs-real { grid-template-columns:repeat(4,1fr); }
+  .gallery-thumbs-real img { height:60px; }
+}
+</style>
+<div class="gallery-section">
+  <img id="gallery-main-img" class="gallery-main-img"
+    src="../uploads/ChatGPT Image 11 ago 2026, 11_48_51.png"
+    alt="Exterior Centro de Formación Acreditado">
+  <div class="gallery-counter"><span id="gallery-idx">1</span> / 17</div>
+  <div class="gallery-thumbs-real" id="gallery-thumbs">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_51.png" alt="Exterior" class="active" onclick="setMain(this,0)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (5).png" alt="Nave principal" onclick="setMain(this,1)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (7).png" alt="Nave · vista general" onclick="setMain(this,2)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_19.png" alt="Sala formación 1" onclick="setMain(this,3)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_36.png" alt="Sala formación 2" onclick="setMain(this,4)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_45.png" alt="Sala formación 3" onclick="setMain(this,5)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (6).png" alt="Aula planta alta" onclick="setMain(this,6)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (2).png" alt="Taller industrial" onclick="setMain(this,7)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_27.png" alt="Sala reuniones" onclick="setMain(this,8)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 12_57_56 (1).png" alt="Recepción" onclick="setMain(this,9)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_47.png" alt="Despacho" onclick="setMain(this,10)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_30.png" alt="Despacho 2" onclick="setMain(this,11)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_56.png" alt="Despacho 3" onclick="setMain(this,12)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (9).png" alt="Office/Cocina" onclick="setMain(this,13)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (10).png" alt="Vestuario" onclick="setMain(this,14)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 11_48_15.png" alt="Acceso seguridad" onclick="setMain(this,15)">
+    <img src="../uploads/ChatGPT Image 11 ago 2026, 12_57_57 (2).png" alt="Sistema seguridad" onclick="setMain(this,16)">
+  </div>
+</div>
+
+<!-- CERTIFICACIÓN DESTACADA -->
+<div style="background:#1a1a00;border-top:3px solid #ff1200;border-bottom:3px solid #ff1200;padding:20px 24px;text-align:center;">
+  <div style="max-width:680px;margin:0 auto;display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <div style="font-size:32px;">🏛️</div>
+    <div style="text-align:left;">
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#ff1200;margin-bottom:4px;">Certificación oficial</div>
+      <div style="font-size:13px;font-weight:700;color:#f7f5ee;line-height:1.4;">Centro Registrado por la <strong>Comunidad de Madrid</strong> para la Impartición de Especialidades Formativas en el Ámbito de la <strong>Formación Profesional para el Empleo</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- DESCRIPCIÓN -->
+<div style="padding: 48px 20px; background: #f7f5ee;">
+  <div class="section" style="padding: 0;">
+    <div class="sec-label">La oportunidad</div>
+    <h2 class="sec-title">Un espacio <em>único</em> para empresas de formación acreditada</h2>
+    <p class="desc-text">
+      Esta nave industrial de dos plantas, ubicada en el polígono de Arganda del Rey, ha sido completamente acondicionada y certificada para la impartición de cursos acreditados. Cuenta con tres salas de formación independientes, un gran taller industrial y todas las instalaciones necesarias para operar desde el primer día.
+    </p>
+    <p class="desc-text">
+      La nave dispone de instalación eléctrica LED de alta eficiencia, sistema de climatización completo, CPD propio, vestuarios, aseo adaptado, office y dos patios. Todo diseñado para el uso formativo profesional.
+    </p>
+    <p class="desc-text">
+      Registralmente limpia — <strong>sin cargas</strong> —, con referencia catastral activa y en pleno rendimiento. Precio <strong>a consultar</strong>.
+    </p>
+    <div class="pills-row">
+      <span class="highlight-pill">✅ Sin cargas registradas</span>
+      <span class="highlight-pill">🏗️ Uso industrial certificado</span>
+      <span class="highlight-pill">🎓 Acreditada para cursos</span>
+      <span class="highlight-pill">⚡ Instalaciones completas</span>
+      <span class="highlight-pill">🚗 Acceso fácil autovía A-3</span>
+    </div>
+  </div>
+</div>
+
+<!-- ESPACIOS -->
+<div class="spaces-bg">
+  <div class="spaces-container">
+    <div class="sec-label">Distribución de espacios</div>
+    <h2 class="sec-title">Todo lo que necesitas <em>ya está aquí</em></h2>
+
+    <div class="planta-label">Planta Baja · 326,80 m² útiles</div>
+    <div class="spaces-grid">
+      <div class="space-card featured">
+        <div>
+          <div class="space-name">🏭 Taller</div>
+          <div class="space-tipo">Espacio principal</div>
+        </div>
+        <div class="space-m2">173,51 m²</div>
+      </div>
+      <div class="space-card formation">
+        <div>
+          <div class="space-name">🎓 Sala Formación 1</div>
+          <div class="space-tipo">Aula acreditada</div>
+        </div>
+        <div class="space-m2">56,70 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">🚪 Recepción</div>
+          <div class="space-tipo">Zona de acceso</div>
+        </div>
+        <div class="space-m2">23,54 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">💻 Office</div>
+          <div class="space-tipo">Sala de descanso</div>
+        </div>
+        <div class="space-m2">15,38 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">👔 Vestuarios</div>
+          <div class="space-tipo">Con taquillas</div>
+        </div>
+        <div class="space-m2">16,32 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">🖥️ CPD</div>
+          <div class="space-tipo">Centro de datos</div>
+        </div>
+        <div class="space-m2">6,96 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">♿ Aseo adaptado</div>
+          <div class="space-tipo">Accesibilidad total</div>
+        </div>
+        <div class="space-m2">5,68 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">🚻 Despacho 1 + Aseos</div>
+          <div class="space-tipo">Planta baja</div>
+        </div>
+        <div class="space-m2">28,71 m²</div>
+      </div>
+    </div>
+
+    <div class="planta-label">Planta Alta · 163,92 m² útiles</div>
+    <div class="spaces-grid">
+      <div class="space-card formation">
+        <div>
+          <div class="space-name">🎓 Sala Formación 2</div>
+          <div class="space-tipo">Aula acreditada</div>
+        </div>
+        <div class="space-m2">56,70 m²</div>
+      </div>
+      <div class="space-card formation">
+        <div>
+          <div class="space-name">🎓 Sala Formación 3</div>
+          <div class="space-tipo">Aula acreditada</div>
+        </div>
+        <div class="space-m2">45,05 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">🏢 Despacho 3</div>
+          <div class="space-tipo">Dirección / coordinación</div>
+        </div>
+        <div class="space-m2">20,66 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">🏢 Despacho 4</div>
+          <div class="space-tipo">Dirección / coordinación</div>
+        </div>
+        <div class="space-m2">20,45 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">📦 Almacén</div>
+          <div class="space-tipo">Material formativo</div>
+        </div>
+        <div class="space-m2">7,83 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">🚻 Aseos + Pasillo</div>
+          <div class="space-tipo">Planta alta</div>
+        </div>
+        <div class="space-m2">13,23 m²</div>
+      </div>
+    </div>
+
+    <div class="planta-label">Patios · 150,54 m²</div>
+    <div class="spaces-grid">
+      <div class="space-card">
+        <div>
+          <div class="space-name">☀️ Patio delantero</div>
+          <div class="space-tipo">Acceso principal</div>
+        </div>
+        <div class="space-m2">72,98 m²</div>
+      </div>
+      <div class="space-card">
+        <div>
+          <div class="space-name">🌿 Patio trasero</div>
+          <div class="space-tipo">Zona exterior</div>
+        </div>
+        <div class="space-m2">77,56 m²</div>
+      </div>
+    </div>
+
+    <div class="totals-bar">
+      <div class="total-item">
+        <div class="total-num">490 m²</div>
+        <div class="total-label">Superficie útil</div>
+      </div>
+      <div class="total-item">
+        <div class="total-num">387 m²</div>
+        <div class="total-label">Construida</div>
+      </div>
+      <div class="total-item">
+        <div class="total-num">502 m²</div>
+        <div class="total-label">Parcela total</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INSTALACIONES -->
+<div style="background:#f7f5ee; padding: 48px 20px;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div class="sec-label">Instalaciones</div>
+    <h2 class="sec-title">Equipada para <em>trabajar desde el primer día</em></h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">⚡</div>
+        <div>
+          <div class="feature-name">Instalación eléctrica LED</div>
+          <div class="feature-desc">Luminarias industriales de alta eficiencia en toda la nave</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">❄️</div>
+        <div>
+          <div class="feature-name">Climatización completa</div>
+          <div class="feature-desc">Equipos Mitsubishi en todas las salas y despachos</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🖥️</div>
+        <div>
+          <div class="feature-name">CPD propio</div>
+          <div class="feature-desc">Sala de servidores y comunicaciones independiente</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🚨</div>
+        <div>
+          <div class="feature-name">Protección contra incendios</div>
+          <div class="feature-desc">Detectores, extintores, BIEs y señalización fotoluminiscente</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">♿</div>
+        <div>
+          <div class="feature-name">Accesibilidad total</div>
+          <div class="feature-desc">Aseo adaptado y accesos sin barreras en planta baja</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🚰</div>
+        <div>
+          <div class="feature-name">Saneamiento completo</div>
+          <div class="feature-desc">Red de saneamiento conectada a red pública integral</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🚗</div>
+        <div>
+          <div class="feature-name">Acceso directo A-3</div>
+          <div class="feature-desc">A 25 km de Madrid, polígono con fácil acceso y parking</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">👕</div>
+        <div>
+          <div class="feature-name">Vestuarios</div>
+          <div class="feature-desc">Zona de cambio para alumnos de cursos prácticos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CATÁLOGO DE CURSOS -->
+<section class="cursos-section" id="cursos">
+  <div class="cursos-container">
+    <div class="cursos-header">
+      <span class="sec-label-light">Formación acreditada</span>
+      <h2>Cursos que se pueden<br>impartir en esta nave</h2>
+      <p>El espacio cuenta con los certificados necesarios para la impartición de los siguientes programas formativos</p>
+    </div>
+
+    <!-- ⚠️ ACTUALIZAR: Pegar aquí el listado real de cursos cuando Bego lo proporcione -->
+    <div class="accordion">
+
+      <div class="acc-item open" onclick="toggleAcc(this)">
+        <button class="acc-header">
+          <div class="acc-title-wrap">
+            <span class="acc-emoji">🦺</span>
+            <span class="acc-title">Prevención de Riesgos Laborales (PRL)</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="acc-count">PENDIENTE</span>
+            <span class="acc-arrow">›</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <ul class="acc-list">
+            <li>[ Añadir cursos específicos de PRL ]</li>
+            <li>[ Añadir nivel y horas de cada curso ]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acc-item" onclick="toggleAcc(this)">
+        <button class="acc-header">
+          <div class="acc-title-wrap">
+            <span class="acc-emoji">🔧</span>
+            <span class="acc-title">Formación Técnica e Industrial</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="acc-count">PENDIENTE</span>
+            <span class="acc-arrow">›</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <ul class="acc-list">
+            <li>[ Añadir cursos técnicos disponibles ]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acc-item" onclick="toggleAcc(this)">
+        <button class="acc-header">
+          <div class="acc-title-wrap">
+            <span class="acc-emoji">🏗️</span>
+            <span class="acc-title">Construcción y Oficios</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="acc-count">PENDIENTE</span>
+            <span class="acc-arrow">›</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <ul class="acc-list">
+            <li>[ Añadir cursos de construcción y oficios ]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acc-item" onclick="toggleAcc(this)">
+        <button class="acc-header">
+          <div class="acc-title-wrap">
+            <span class="acc-emoji">💼</span>
+            <span class="acc-title">Gestión y Administración de Empresas</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="acc-count">PENDIENTE</span>
+            <span class="acc-arrow">›</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <ul class="acc-list">
+            <li>[ Añadir cursos de gestión y administración ]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acc-item" onclick="toggleAcc(this)">
+        <button class="acc-header">
+          <div class="acc-title-wrap">
+            <span class="acc-emoji">📋</span>
+            <span class="acc-title">Otros programas formativos</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="acc-count">PENDIENTE</span>
+            <span class="acc-arrow">›</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <ul class="acc-list">
+            <li>[ Añadir otros cursos acreditados ]</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cursos-cta">
+      <a href="ficha-mulhacen-12.html" target="_blank" class="btn-download" id="btn-descargar-cursos">
+        📥 Descargar ficha del inmueble
+      </a>
+      <a href="#contacto" class="btn-contact-cursos">
+        Consultar disponibilidad →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FICHA REGISTRAL -->
+<div style="background:#f7f5ee; padding: 48px 20px;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div class="sec-label">Ficha registral</div>
+    <h2 class="sec-title">Información legal y <em>registral</em></h2>
+    <div class="registral-card">
+      <div class="reg-row">
+        <span class="reg-key">Tipo de finca</span>
+        <span class="reg-val">Urbana · Nave industrial</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">Dirección</span>
+        <span class="reg-val">C/ Pico Mulhacén, 12, Arganda del Rey</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">Finca registral</span>
+        <span class="reg-val">Nº 27970 (Arganda del Rey Nº 2)</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">Ref. Catastral</span>
+        <span class="reg-val">9121306VK5692S0001ZM</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">Sup. construida</span>
+        <span class="reg-val">514,23 m²</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">Sup. parcela</span>
+        <span class="reg-val">500 m²</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">Cargas registradas</span>
+        <span class="reg-badge">✓ Sin cargas</span>
+      </div>
+      <div class="reg-row">
+        <span class="reg-key">Precio</span>
+        <span class="reg-val" style="font-size:15px;font-weight:900;color:#ff1200;">A consultar</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLANOS -->
+<div class="planos-section">
+  <div class="planos-container">
+    <div class="sec-label">Distribución</div>
+    <h2 class="sec-title">Planos del <em>espacio</em></h2>
+    <div class="planos-grid">
+      <div class="plano-card">
+        <div class="plano-thumb">📐</div>
+        <div class="plano-name">
+          Planta Baja
+          <div class="plano-sup">326,80 m² útiles</div>
+        </div>
+      </div>
+      <div class="plano-card">
+        <div class="plano-thumb">📐</div>
+        <div class="plano-name">
+          Planta Alta
+          <div class="plano-sup">163,92 m² útiles</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#999;text-align:center;margin-top:14px;">
+      📌 Planos técnicos completos disponibles bajo solicitud al agente
+    </p>
+  </div>
+</div>
+
+<!-- PRECIO / CTA -->
+<div class="precio-banner" id="precio">
+  <div class="precio-label">Precio de venta</div>
+  <div class="precio-val">A consultar</div>
+  <div class="precio-sub">Nave industrial acreditada · 490 m² útiles · Arganda del Rey</div>
+  <a href="#contacto" class="btn-precio">Solicitar precio →</a>
+</div>
+
+<!-- AGENTE -->
+<section class="agent-section" id="contacto">
+  <div class="agent-container">
+    <div class="cursos-header" style="margin-bottom:24px;">
+      <span class="sec-label-light">Agente responsable</span>
+      <h2 style="font-family:'Montserrat',sans-serif;font-style:normal;font-size:clamp(18px,3vw,26px);font-weight:800;color:#f7f5ee;">
+        ¿Te interesa esta nave?
+      </h2>
+    </div>
+    <div class="agent-card">
+      <img src="https://drive.google.com/thumbnail?id=110uFAOFaoS63RoQ6v27zl9O3KAss_LCn&sz=w300-h300-c" alt="Víctor Manuel Pérez Labrador" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid #ff1200;flex-shrink:0;" onerror="this.outerHTML='<div class=&quot;agent-photo-placeholder&quot; style=&quot;width:80px;height:80px;border-radius:50%;background:#222;border:3px solid #ff1200;display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;&quot;>👤</div>'">
+      <div style="flex:1;">
+        <div class="agent-name">Víctor Manuel Pérez Labrador</div>
+        <div class="agent-role">Agente Asociado · REMAX Horizon</div>
+        <div class="agent-btns">
+          <a href="https://wa.me/34699830609?text=Hola%20Víctor%2C%20me%20interesa%20la%20nave%20de%20C%2F%20Pico%20Mulhacén%2012%20en%20Arganda%20del%20Rey" class="btn-wa">
+            💬 WhatsApp · 699 830 609
+          </a>
+          <a href="mailto:victor.perez@remax.es?subject=Consulta nave C/ Pico Mulhacén 12, Arganda del Rey" class="btn-mail">
+            ✉️ victor.perez@remax.es
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="agent-divider">
+      ¿Tienes preguntas sobre los certificados o los cursos disponibles?<br>
+      <span style="color:#888;">Víctor te resuelve todas las dudas en menos de 24h.</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <svg width="110" height="30" viewBox="0 0 120 34" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:10px;">
+    <circle cx="13" cy="13" r="10" fill="#ff1200"/>
+    <circle cx="13" cy="13" r="5.5" fill="white"/>
+    <circle cx="13" cy="13" r="2.4" fill="#ff1200"/>
+    <line x1="13" y1="23" x2="13" y2="30" stroke="#ff1200" stroke-width="2.2"/>
+    <text x="29" y="15" font-family="-apple-system,Arial,sans-serif" font-size="14" font-weight="900" fill="white">REMAX</text>
+    <text x="29" y="27" font-family="-apple-system,Arial,sans-serif" font-size="8.5" font-weight="700" fill="#f7f5ee" letter-spacing="1.6">HORIZON</text>
+  </svg>
+  <p class="footer-brand">REMAX Horizon · Las Rozas de Madrid</p>
+  <p>📱 +34 699 830 609 · ✉️ victor.perez@remax.es</p>
+  <p class="footer-legal">
+    © 2026 REMAX Horizon. Todos los derechos reservados.<br>
+    Nave Industrial · C/ Pico Mulhacén, 12 · 28500 Arganda del Rey (Madrid)
+  </p>
+</footer>
+
+<script>
+function toggleAcc(item) {
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+const galleryImages = [
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_51.png', label: 'Exterior · Centro acreditado Comunidad de Madrid' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (5).png', label: 'Nave principal · Puerta acceso y zona de trabajo' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (7).png', label: 'Nave · Vista general con estructura de 2 plantas' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_19.png', label: 'Sala de Formación 1 — 56,70 m² · Proyector y climatización' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_36.png', label: 'Sala de Formación 2 — 56,70 m² · Equipada con cámara y proyector' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_45.png', label: 'Sala de Formación 3 — 45,05 m² · Configuración auditorio + pizarra' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (6).png', label: 'Aula planta alta · Vista desde exterior a través del vidrio' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (2).png', label: 'Taller industrial · Equipamiento y almacenamiento' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_27.png', label: 'Sala de reuniones con mesa de cristal' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 12_57_56 (1).png', label: 'Recepción y zona administrativa' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_47.png', label: 'Despacho de coordinación con AC' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_30.png', label: 'Despacho con mampara de cristal' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_56.png', label: 'Despacho planta alta' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (9).png', label: 'Office · Cocina y comedor equipados' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 13_24_46 (10).png', label: 'Vestuario · 50+ taquillas individuales con AC' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 11_48_15.png', label: 'Acceso con control biométrico y alarma de incendios' },
+  { src: '../uploads/ChatGPT Image 11 ago 2026, 12_57_57 (2).png', label: 'Sistema de seguridad y control de accesos' },
+];
+let currentIdx = 0;
+
+function setMain(thumb, idx) {
+  document.getElementById('gallery-main-img').src = galleryImages[idx].src;
+  document.getElementById('gallery-main-img').alt = galleryImages[idx].label;
+  document.getElementById('gallery-idx').textContent = idx + 1;
+  document.querySelectorAll('#gallery-thumbs img').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+  currentIdx = idx;
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') advanceGallery(1);
+  if (e.key === 'ArrowLeft') advanceGallery(-1);
+});
+
+function advanceGallery(dir) {
+  currentIdx = (currentIdx + dir + galleryImages.length) % galleryImages.length;
+  const thumbs = document.querySelectorAll('#gallery-thumbs img');
+  document.getElementById('gallery-main-img').src = galleryImages[currentIdx].src;
+  document.getElementById('gallery-idx').textContent = currentIdx + 1;
+  thumbs.forEach(t => t.classList.remove('active'));
+  thumbs[currentIdx].classList.add('active');
+}
+</script>
+
+</body>
+</html>
